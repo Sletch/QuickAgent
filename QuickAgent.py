@@ -27,6 +27,15 @@ from deepgram import (
 )
 
 load_dotenv()
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # This should be at the very beginning of your script.
+
+# Print to debug
+print("GROQ_API_KEY:", os.getenv("GROQ_API_KEY"))
+print("DEEPGRAM_API_KEY:", os.getenv("DEEPGRAM_API_KEY"))
+
 
 class LanguageModelProcessor:
     def __init__(self):
